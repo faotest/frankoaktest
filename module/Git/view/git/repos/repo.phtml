@@ -1,0 +1,13 @@
+<h1>User Repositories</h1>
+
+<?php var_dump($repos);?>
+
+<?php if (count($repos)):?>
+    <ul>
+        <?php foreach ($repos as $repo): ?>
+            <li><a href="<?php echo $this->url('git/default', array('controller' => 'repos', 'action' => 'repo', 'id' => ''));?>?user=<?php echo $repo->owner->login;?>&repo=<?php echo $repo->owner->login;?>"><?php echo $repo->name;?></a></li>
+        <?php endforeach;?>
+    </ul>
+<?php else: ?>
+    <p>No repositories found for this user.</p>
+<?php endif;?>
