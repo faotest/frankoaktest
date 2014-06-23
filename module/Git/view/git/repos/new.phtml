@@ -1,0 +1,33 @@
+<h1>Branch Head Details</h1>
+
+<div id="branchInfo">
+    <label>
+        <span>Message</span>
+        <?php echo $branch->commit->commit->message;?>
+    </label>
+
+    <label>
+        <span>Sha</span>
+        <?php echo $branch->commit->sha;?>
+    </label>
+
+    <label>
+        <span>Author</span>
+        <?php echo $branch->commit->commit->author->name;?>
+    </label>
+
+    <label>
+        <span>Author date</span>
+        <?php echo $branch->commit->commit->author->date;?>
+    </label>
+
+    <label>
+        <span>Committer</span>
+        <?php echo $branch->commit->commit->committer->name;?>
+    </label>
+
+    <label>
+        <span>Committer date</span>
+        <?php echo $branch->commit->commit->committer->date;?>
+    </label>
+</div>
